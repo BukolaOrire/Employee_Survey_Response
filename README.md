@@ -8,10 +8,11 @@
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Data Analysis](#data-analysis)
 - [Findings/Recommendations](#findings-recommendations)
+- [Limitations](limitations)
 
 
 ## Project Overview
-The Employee Survey Responses are actual responses from an employee engagement survey conducted by Pierce County WA and completed voluntarily by government employees. The dataset is a Single table and contains 14,725 records. The total number of fields is 10. This aim is to analysis the data and generate insights to help improve employee job satisfaction
+The Employee Survey Responses are actual responses from an employee engagement survey conducted by Pierce County WA and completed voluntarily by government employees. The dataset is a Single table and contains 14,725 records. The total number of fields is 10. Thie aim of this analysis is to generate insights to help improve employee job satisfaction
 
 ## Data Source
 This is the main dataset used in this analysis "Employee Survey - HR Survey Reponse.csv" file, containing detailed information about each survey question and employee response. [Download_here](https://docs.google.com/spreadsheets/d/1nbhfp2ModgqDAPveYQG9CknRw2PYJQxbOTs3xSKOB8E/edit#gid=61186505)
@@ -23,8 +24,7 @@ This is the main dataset used in this analysis "Employee Survey - HR Survey Repo
 
 ## Data Cleaning
 1. There are 15 duplicate rows which where cleaned using power query
-2. Column Response, and Response text have 135 Null Rows where status is "incomplete".
-3. Data Formatting
+2. Data Formatting
 
 ## Exploratory Data Analysis
 1. Which survey question did respondents agree with or disagree with the most?
@@ -32,6 +32,9 @@ This is the main dataset used in this analysis "Employee Survey - HR Survey Repo
 3. Questions Respondenets totally agreed with and disagreed with the most by Job roles
 4. Questions Respondenets totally agreed with and disagreed with the most by department
 5. As a data analyst, what steps might you take to improve employee satisfaction based on the survey results?
+
+![Dashboard](Dashboard.png)
+
 
 ## Data Analysis
 ``` sql
@@ -122,4 +125,7 @@ ORDER BY 2 DESC
   and eliminate any form of bias in the workplace.
 - Generally, Directors are the least dissatisfied. Further analysis revealed job satisfaction is low. Among 1,452 respondents to 
   question 1, a total of 1,107 respondents are dissatisfied with their job.
+
+  ## Limitations
+ I did not make use of Column status where status in "Incomplete" for analysis on employees Overall response rating as they are unrealiable
  
