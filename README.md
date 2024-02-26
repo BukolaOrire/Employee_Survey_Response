@@ -129,5 +129,6 @@ ORDER BY 2 DESC
   question 1, a total of 1,107 respondents are dissatisfied with their job.
 
   ## Limitations
- I did not make use of Column status where status in "Incomplete" for analysis on employees Overall response rating as they are unrealiable
+   I did not make use of Column status where status in "Incomplete" for analysis on employees overall response rating as they are unrealiable and respondents failed to specify their job 
+   roles and response.
  
