@@ -33,7 +33,6 @@ This is the main dataset used in this analysis "Employee Survey - HR Survey Repo
 4. Questions Respondenets totally agreed with and disagreed with the most by department
 5. As a data analyst, what steps might you take to improve employee satisfaction based on the survey results?
 
-![employee survey response dashboard](employee_survey_response_dashboard.png)
 
 ![employee survey response dashboard](https://github.com/BukolaOrire/Employee_Survey_Response/assets/161165047/3977358f-d31e-49a6-90df-5433c2232626)
 
