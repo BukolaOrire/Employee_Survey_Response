@@ -22,6 +22,86 @@ This is the main dataset used in this analysis "Employee Survey - HR Survey Repo
 3. Questions Respondenets totally agreed with and disagreed with the most by Job roles
 4. Questions Respondenets totally agreed with and disagreed with the most by department
 5. As a data analyst, what steps might you take to improve employee satisfaction based on the survey results?
-6. 
+
+## Data Analysis
+``` sql
+ SELECT * FROM Employee_Survey 
+
+ ---survey questions respondants agree and disagree with the most 
+ SELECT Question, Response_text
+       ,COUNT(Response_text) AS Response_count
+ FROM Employee_Survey 
+ GROUP BY  Question, Response_text
+ HAVING COUNT(Response_text) IN (189,469,663,846)
+ ORDER BY 3 DESC
+
+ ---What Department has the Highest number of Response
+ SELECT Department,COUNT(Response) AS Respondents 
+ FROM Employee_Survey 
+ WHERE Status = 'Complete'
+ GROUP BY Department
+ ORDER BY 2 DESC
+
+ ----What Question did Respondents Agree With by Department ? 
+ SELECT Department,Question
+       ,SUM(CASE WHEN Response BETWEEN 3 AND 4 THEN 1 ELSE 0 END) AS Totally_Agree
+ FROM Employee_Survey 
+ WHERE Status ='Complete' 
+ GROUP BY Department,Question
+ ORDER BY  1, 3 DESC
+
+  ----What Question did Respondents Disagree With by Department ? 
+ SELECT Department,Question
+	   ,SUM(CASE WHEN Response BETWEEN 1 AND 2 THEN 1 ELSE 0 END ) AS Totally_Disagree
+ FROM Employee_Survey 
+ WHERE Status ='Complete' 
+ GROUP BY Department,Question
+ ORDER BY  1, 3 DESC
+
+
+-- What Survey Questions did Respondents Agree/Disagree with by Job Role
+--Survey Questions Directors Agreed and Disagreed with the most 
+SELECT Question,
+       SUM(CASE WHEN Response BETWEEN 3 AND 4 THEN 1 ELSE 0 END) AS Totally_Agree,
+	   SUM(CASE WHEN Response BETWEEN 1 AND 2 THEN 1 ELSE 0 END ) AS Totally_Disagree
+FROM Employee_Survey 
+WHERE Status = 'Complete' AND  Director = '1'
+GROUP BY Question
+ORDER BY 1, 2
+
+--Survey Questions Managers Agreed and Disagreed with the most 
+SELECT Question,
+       SUM(CASE WHEN Response BETWEEN 3 AND 4 THEN 1 ELSE 0 END) AS Totally_Agree,
+	   SUM(CASE WHEN Response BETWEEN 1 AND 2 THEN 1 ELSE 0 END ) AS Totally_Disagree
+FROM Employee_Survey 
+WHERE Status = 'Complete' AND  Manager = '1'
+GROUP BY Question
+ORDER BY 1, 3 DESC
+
+--Survey Questions Staff Agreed and Disagreed with the most 
+SELECT Question,
+       SUM(CASE WHEN Response BETWEEN 3 AND 4 THEN 1 ELSE 0 END) AS Totally_Agree,
+	   SUM(CASE WHEN Response BETWEEN 1 AND 2 THEN 1 ELSE 0 END ) AS Totally_Disagree
+FROM Employee_Survey 
+WHERE Status = 'Complete' AND  Staff = '1'
+GROUP BY Question
+ORDER BY 1, 2
+
+--Survey Questions Surpervisors Agreed and Disagreed with the most 
+SELECT  Question,
+       SUM(CASE WHEN Response BETWEEN 3 AND 4 THEN 1 ELSE 0 END) AS Totally_Agree,
+	   SUM(CASE WHEN Response BETWEEN 1 AND 2 THEN 1 ELSE 0 END ) AS Totally_Disagree
+FROM Employee_Survey 
+WHERE Status = 'Complete' AND  Supervisor = '1'
+GROUP BY Question
+ORDER BY 1, 2
+
+---Analysis on Respondents with incomplete status by Job Role
+SELECT Department,COUNT(Response_ID) AS Incomplete_Response_Count
+FROM Employee_Survey 
+WHERE Status = 'Incomplete' 
+GROUP BY ROLLUP (Department)
+ORDER BY 2 DESC
+```
 
  
