@@ -103,5 +103,13 @@ WHERE Status = 'Incomplete'
 GROUP BY ROLLUP (Department)
 ORDER BY 2 DESC
 ```
-
+## Findings/Recommendations
+- Staff, Managers, and Supervisors have the most disagreeing response to question (3.In the last Seven days , I have received 
+  recognition  or praise for doing a good work) This proves they don't feel valued for their work.
+- Management need to implement a better performance appraisal method and conduct proper employee performance evaluations to ensure that 
+ employees are being recognized for their work. Advancement in employee training and career development and offering adequate reward and 
+  other other benefits will help to improve performance and satisfaction. Employee sensitization and training will help foster awareness 
+  and eliminate any form of bias in the workplace.
+- Generally, Directors are the least dissatisfied. Further analysis revealed job satisfaction is low. Among 1,452 respondents to 
+  question 1, a total of 1,107 respondents are dissatisfied with their job.
  
