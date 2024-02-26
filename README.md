@@ -12,7 +12,7 @@
 
 
 ## Project Overview
-The Employee Survey Responses are actual responses from an employee engagement survey conducted by Pierce County WA and completed voluntarily by government employees. The dataset is a Single table and contains 14,725 records. The total number of fields is 10. Thie aim of this analysis is to generate insights to help improve employee job satisfaction
+The dataset ia a single table with 14,725 records consisting of Employee Responses from an employee engagement survey. The total number of fields is 10.The aim and objective of this analysis is to generate insights to help improve employee job satisfaction.
 
 ## Data Source
 This is the main dataset used in this analysis "Employee Survey - HR Survey Reponse.csv" file, containing detailed information about each survey question and employee response. [Download_here](https://docs.google.com/spreadsheets/d/1nbhfp2ModgqDAPveYQG9CknRw2PYJQxbOTs3xSKOB8E/edit#gid=61186505)
