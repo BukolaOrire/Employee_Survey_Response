@@ -7,12 +7,13 @@
 - [Data Cleaning](#data-cleaning)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Data Analysis](#data-analysis)
-- [Findings/Recommendations](#findings-recommendations)
+- [Findings/conclusion](#findings-conclusion)
 - [Limitations](limitations)
 
 
 ## Project Overview
 The dataset ia a single table with 14,725 records consisting of Employee Responses from an employee engagement survey. The total number of fields is 10.The aim and objective of this analysis is to generate insights to help improve employee job satisfaction.
+**_Disclaimer_**: _All datasets and reportd do not represent any company, institution or country, but just a dummy dataset to demonstrate capabilities of Sql._**
 
 ## Data Source
 This is the main dataset used in this analysis "Employee Survey - HR Survey Reponse.csv" file, containing detailed information about each survey question and employee response. [Download_here](https://docs.google.com/spreadsheets/d/1nbhfp2ModgqDAPveYQG9CknRw2PYJQxbOTs3xSKOB8E/edit#gid=61186505)
@@ -118,7 +119,7 @@ WHERE Status = 'Incomplete'
 GROUP BY ROLLUP (Department)
 ORDER BY 2 DESC
 ```
-## Findings/Recommendations
+## Findings/Conclusion
 - Staff, Managers, and Supervisors have the most disagreeing response to question (3.In the last Seven days , I have received 
   recognition  or praise for doing a good work) This proves they don't feel valued for their work.
 - Management need to implement a better performance appraisal method and conduct proper employee performance evaluations to ensure that 
